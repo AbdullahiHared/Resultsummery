@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .main {
+      margin-left: 34%;
+      margin-top: 10%;
+      background-color: white;
+      flex-wrap:wrap-reverse;
+      display: flex;
+      width: 480px;
+      box-shadow: 10px 10px 10px rgb(248, 244, 244);
+      justify-content: center;
+      border-radius: 22px;
+    }
+
+    .leftside {
+      cursor: pointer;
+      flex-direction: column;
+      display: flex;
+      gap: 30px;
+      background-color: rgb(75, 75, 231);
+      width: 200px;
+      height: 300px;
+      padding: 19px;
+      border-radius: 20px;
+      align-items: center;
+      color: white;
+      align-items: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .percentage {
+      display: flex;
+      align-self: center;
+      flex-direction: column;
+      align-items: center;
+      width: 120px;
+      filter: contrast(1.5rem);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(63, 63, 191, 0.2));
+      height: 120px;
+      border-radius: 150px;
+    }
+
+    .seventy {
+      font-size: 59px;
+      filter: contrast(1.5rem);
+      font-weight: bolder;
+      padding-top: 15px;
+    }
+
+    .outOfHundred {
+      padding-bottom: 100px;
+      filter: contrast(10%);
+    }
+
+    .rightside {
+      flex-direction: column;
+      border: none;
+      display: flex;
+      gap: 20px;
+      width: 200px;
+      height: 300px;
+      padding: 19px;
+      font-weight: 200px;
+      border-radius: 20px;
+      align-items: center;
+    }
+
+    .summery {
+      align-self: flex-start;
+      font-size: 20px;
+      font-weight: 450;
+
+    }
+
+    .memory,
+    .reaction,
+    .verbal,
+    .visual {
+      gap: 10px;
+      padding-left: 10px;
+    }
+
+    .memory {
+      display: flex;
+      color: rgb(231, 231, 34);
+      align-items: center;
+      justify-content: flex-start;
+      width: 190px;
+      border-radius: 5px;
+      height: 37px;
+      background-color: rgb(244, 244, 227);
+    }
+
+    .verbal {
+      display: flex;
+      color: green;
+      align-items: center;
+      justify-content: flex-start;
+      width: 190px;
+      border-radius: 5px;
+      height: 37px;
+      background-color: rgb(216, 235, 216);
+    }
+
+    .visual {
+      display: flex;
+      color: blue;
+      align-items: center;
+      justify-content: flex-start;
+      width: 190px;
+      border-radius: 5px;
+      height: 37px;
+      background-color: rgb(195, 212, 217);
+    }
+
+    .reaction {
+      display: flex;
+      color: orangered;
+      align-items: center;
+      justify-content: flex-start;
+      width: 190px;
+      border-radius: 5px;
+      height: 37px;
+      background-color: rgb(243, 228, 228);
+    }
+
+    .continue {
+      width: 190px;
+      height: 35px;
+      color: white;
+      background-color: rgb(6, 6, 91);
+      border-radius: 90px;
+      border: none;
+      cursor: pointer;
+    }
+
+    img {
+      padding-right: 10px;
+    }
+    .score {
+      display: flex;
+      margin-left:30px;
+      align-items:center;
+      justify-content: center;
+      flex-direction:row;
+    }
+   
+    span {
+      color: black;
+      filter: contrast(20%);
+    }
+
+    p {
+      font-weight: bold;
+      color: darkblue;
+    }
+
+    .bottom {
+      display:flex;
+      align-items: center;
+      margin-left:13px;
+      flex-direction:row;
+    }
+    .bottomLines {
+      padding-right:-40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="leftside">
+      <div class="result"> Your result</div>
+      <div class="percentage">
+        <div class="seventy">76</div>
+        <div class="outOfHundred"> of 100</div>
+      </div>
+      <div class="great">Great</div>
+      <div class="lastText">You scored higher than 65% of the people who have taken these tests</div>
+    </div>
+    <div class="rightside">
+      <div class="summery">Summery</div>
+      <div class="reaction">
+        <img src="./assets/images/icon-reaction.svg" alt="">
+        Reaction
+        <div class="score">
+          <p>80</p><span>/100</span>
+        </div>
+      </div>
+      <div class="memory">
+        <img src="./assets/images/icon-memory.svg" alt="">
+        Memory
+        <div class="score">
+          <p>92</p><span>/100</span>
+        </div>
+      </div>
+      <div class="verbal">
+        <img src="./assets/images/icon-verbal.svg" alt="">
+        Verbal
+        <div class="score">
+          <div class="bottom"><p>61</p>/100</div>
+        </div>
+      </div>
+      <div class="visual">
+        <img src="./assets/images/icon-visual.svg" alt="">
+        Visual
+        <div class="score">
+          <div class="bottom"><p>72</p><span>/100</span></div>
+        </div>
+      </div>
+      <button class="continue">Continue</button>
+    </div>
+  </div>
+
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdullah</a>.
+  </div> -->
+</body>
+
+</html>
